@@ -2,6 +2,12 @@
 
 Portfolio project analyzing customer shopping behavior using Python, SQL, Excel, and Power BI.
 
+## Dashboard Preview
+
+![Customer Shopping Behavior Dashboard](images/dashboard_preview.svg)
+
+> This is a portfolio preview. It is not an interactive Power BI report.
+
 ## Project Overview
 
 This educational portfolio project uses a public customer shopping dataset to demonstrate data cleaning, exploratory analysis, SQL analysis, KPI development, and dashboard design.
@@ -38,6 +44,10 @@ powerbi/      DAX measures for Power BI
 - Which locations and products have higher purchase activity?
 - How frequently do customers purchase?
 - How are discounts and payment methods distributed?
+
+## Analysis Outputs
+
+The Python workflow produces cleaned and summarized files for downstream Power BI analysis, including KPI, category, age-group, and location summaries.
 
 ## Source Dataset
 The project uses the public `shopping_behavior_updated.csv` dataset from GitHub for educational analysis.
