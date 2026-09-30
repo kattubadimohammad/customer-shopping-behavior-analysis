@@ -1,0 +1,28 @@
+Total Sales = SUM(inventory_sales_demo[Sales])
+
+Closing Stock = SUM(inventory_sales_demo[Closing Stock])
+
+Fill Rate % =
+DIVIDE(
+    SUM(inventory_sales_demo[Filled Qty]),
+    SUM(inventory_sales_demo[Demand]),
+    0
+)
+
+Instock % =
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(inventory_sales_demo),
+        inventory_sales_demo[Closing Stock] > 0
+    ),
+    COUNTROWS(inventory_sales_demo),
+    0
+)
+
+Sell Through % =
+DIVIDE(
+    SUM(inventory_sales_demo[Filled Qty]),
+    SUM(inventory_sales_demo[Filled Qty]) +
+        SUM(inventory_sales_demo[Closing Stock]),
+    0
+)
