@@ -1,0 +1,15 @@
+Total Sales = SUM('customer_shopping_behavior'[purchase_amount_usd])
+
+Transactions = COUNTROWS('customer_shopping_behavior')
+
+Average Purchase = AVERAGE('customer_shopping_behavior'[purchase_amount_usd])
+
+Average Rating = AVERAGE('customer_shopping_behavior'[review_rating])
+
+Subscribers = CALCULATE([Transactions], 'customer_shopping_behavior'[subscription_status] = "Yes")
+
+Subscription Rate % = DIVIDE([Subscribers], [Transactions])
+
+Discounted Transactions = CALCULATE([Transactions], 'customer_shopping_behavior'[discount_applied] = "Yes")
+
+Discount Rate % = DIVIDE([Discounted Transactions], [Transactions])
